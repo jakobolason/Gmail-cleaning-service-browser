@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  label, select, input, button {
+    margin: 0 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  select, input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+.banner {
+    background-image: url(https://img.freepik.com/premium-vector/cool-geometric-line-modern-background-pattern_538547-1551.jpg);
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+.banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white; /* This is the background color for the text */
+  padding: 20px;
+  color:brown;
+}
+
+
+.unchosen {
+  color: grey;
+}
+
+.chosen {
+  color: black;
+
+}
+
+
+.response {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size:xx-large;
+  display: flex;
+  text-align: right;
+  text-decoration-skip:inherit;
+  padding: 40px
+}
+
+th {
+  border: 2px solid #4CAF50;
+}
+
+table {
+  text-align: center;
+  margin: 10px auto;
+}
+
+td {
+  border: 2px solid #4CAF50;
+  width: 200px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 4s linear infinite;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

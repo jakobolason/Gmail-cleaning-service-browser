@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gmail cleaning service</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"> 
+    </head>
+<body>
+    <h1 class="banner">Welcome to the Gmail cleaning service</h1>
+    <h2>What can we do for you today?</h2>
+    <form action="/" method="POST">
+        <label for="delete">Delete Emails</label>
+        <input type="radio" id="delete" name="option" value="delete">
+        <br>
+        <label for="labels">See Labels</label>
+        <input type="radio" id="labels" name="option" value="labels">
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    <br>
+    <a href="/submit">Go to Submit Page</a>
+</body>
+</html>
