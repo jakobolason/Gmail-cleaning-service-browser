@@ -17,11 +17,11 @@ correct environment using conda :)
    conda init
    ```
    close that window
-   open a new cmd window in your Cleaning service dir and type
+   open a new cmd window in your Cleaning service dir (or navigate to the dir) and type
    ```
    conda create -n cleaning_service python=3.8 -y
    conda activate cleaning_service
    pip install -r requirements.txt
-   python api.py
    ```
-   
+   If you have correctly placed the credentials.json file in the directory, then you should now be able to launch the site
+   and clean up your Gmail inbox :)
