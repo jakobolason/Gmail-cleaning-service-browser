@@ -17,7 +17,7 @@ correct environment using conda :)
    conda init
    ```
    close that window
-   open a new cmd window in your Alpaca-Turbo dir and type
+   open a new cmd window in your Cleaning service dir and type
    ```
    conda create -n cleaning_service python=3.8 -y
    conda activate cleaning_service
