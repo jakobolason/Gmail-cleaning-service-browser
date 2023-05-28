@@ -1,7 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    background-image: url("https://www.popsci.com/uploads/2019/03/18/JZJLNX5GQRCUYIXRMJ6CQZBPNU.jpg?auto=webp");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
   }
 
   h1, h2 {
@@ -9,6 +13,16 @@ body {
     margin: 20px 0;
   }
   
+  /* Form inputs */
+
+  .submissions {
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 10px;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+
   form {
     display: flex;
     justify-content: center;
@@ -28,32 +42,103 @@ body {
     border-radius: 5px;
     border: 1px solid #ccc;
   }
+
+  .fancy_button {
+    position: relative;
+    display: block;
+    margin: auto;
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 300px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 5px;
+    line-height: 100px;
+    cursor:pointer;
+  }
+
+  .fancy_button span,
+  .fancy_button .icon {
+    position:absolute;
+    display: block;
+    height: 100%;
+    text-align: center;
+  }
+
+  .fancy_button span {
+    line-height: inherit;
+    width: 72%;
+    font-size: 20px;
+    left: 5%;
+    font-weight: bold;
+  }
   
-  button {
-    background-color: #4CAF50;
+  .fancy_button .icon {
+    right: 0px;
+    width: 28%;
+  }
+
+  .fancy_button .icon .fa {
+    font-size: 25px;
+    vertical-align: middle;
+  }
+
+  .icon {
+    background-color: #276fa0;
+    height: 100px;
+  }
+
+  .fancy_button span, 
+  .fancy_button div,
+  .fancy_button i {
+    transition: all 1s linear;
+  }
+
+  .fancy_button:hover .icon {
+    width: 100%;
+  }
+
+  .fancy_button:hover .icon .fa {
+    font-size: 35px;
+  }
+
+  #submit-button {
+    background-color: #6e3b1c;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    transition-duration: 0.75s;
   }
 
+  #submit-button:hover {
+    background-color: red
+  }
+
+
+/* banner */
+
 .banner {
-    background-image: url(https://img.freepik.com/premium-vector/cool-geometric-line-modern-background-pattern_538547-1551.jpg);
-    background-size: cover;
-    height: 400px;
-    position: relative;
-}
-.banner h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white; /* This is the background color for the text */
-  padding: 20px;
-  color:brown;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 400px;
+
 }
 
+.banner h1 {
+  display: flex;
+  justify-items: center;
+  align-items:flex-start;
+  padding-top: 20px;
+  padding: 20px;
+  color:rgb(27, 116, 219);
+}
+
+/* dropdown menu colors */
 
 .unchosen {
   color: grey;
@@ -64,6 +149,7 @@ body {
 
 }
 
+/* response from gmail API */
 
 .response {
   font-family: 'Courier New', Courier, monospace;
@@ -75,8 +161,18 @@ body {
   padding: 40px
 }
 
+/* table */
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
 th {
-  border: 2px solid #4CAF50;
+  border: 2px solid #6e3b1c;
 }
 
 table {
@@ -85,9 +181,18 @@ table {
 }
 
 td {
-  border: 2px solid #4CAF50;
+  border: 2px solid #6e3b1c;
   width: 200px;
 }
+
+#showcount {
+  background-color: #6e3b1c;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+/* loading bar */
 
 .loader {
   border: 16px solid #f3f3f3;

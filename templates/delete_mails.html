@@ -4,26 +4,37 @@
     <meta charset="UTF-8">
     <title>Gmail cleaning service</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/delete_mails.css') }}">
+    <script src="https://kit.fontawesome.com/3c48dcaf01.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <div class="banner">
-      <h1>Gmail Cleaning Service</h1>
+      <h1><i class="fa fa-google"></i>mail Cleaning Service</h1>
     </div>
-    <h2>Here you can delete your annoying promotional mails you will never need, or just remove all your unseen mails, that you never will see.</h2>
+    <h2>This tool can delete from any label in your Gmail library, any number of emails<i class="fa-solid fa-ad"></i></h2>
+    
     <form method="post">
-      <label for="label-dropdown">Select label:</label>
-        <select id="label-dropdown" name="label-dropdown">
-            <option value='value1' class="unchosen">---------- Choose label ----------</option>
-            {% for label in label_list %} 
-              <option value={{ label }} class="chosen">{{ label }}</option>
-            {% endfor %}
-        </select>
+      <div class="submissions">
+        <label for="label-dropdown">Select label:</label>
+          <select id="label-dropdown" name="label-dropdown">
+              <option value='value1' class="unchosen">---------- Choose label ----------</option>
+              {% for label in label_list %} 
+                <option value={{ label }} class="chosen">{{ label }}</option>
+              {% endfor %}
+          </select>
 
-      <label for="number-input">Quantity:</label>
-      <input type="number" id="number-input" name="number-input">
+        <label for="number-input">Quantity:</label>
+        <input type="number" id="number-input" name="number-input">
+      </div>
 
-      <button type="submit" id="submit-button">Submit</button>
+      <button type="submit">
+        <a class="fancy_button" style="color: black;" stylehref="#" type="submit" role="button">
+          <span>Trash</span>
+          <div class="icon">
+            <i class="fa fa-trash-alt"></i>
+          </div>
+        </a>
+      </button>
     </form>
 
     {% if response %}
@@ -38,7 +49,6 @@
           <tr>
             <th colspan='2'>
             <h3>Number of emails</h3>
-            <button type="button" id="myButton">Show table of labels and emails</button>
             </th>
           </tr>
           <tr>
@@ -53,13 +63,14 @@
         <tbody id="label-table-body">
         </tbody>
       </table>
+      <button type="button" id="showcount">Show table of labels and emails</button>
 
       <div class="loader" id="loader" style="display: none;"></div>
     
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script>
         $(document).ready(function() {
-          $("#myButton").click(function() {
+          $("#showcount").click(function() {
             $('#loader').show();
             $.ajax({
               type: "GET",
@@ -90,8 +101,6 @@
           });
         });
       </script>
-      
-
     </div>
   </body>
 </html>
