@@ -11,16 +11,16 @@ correct environment using conda :)
 1 - First install conda:
     - [windows](https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe) 
     - [Mac M1/M2](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.pkg)  
-2 - initialize conda
+2 - initialize conda.
    Open cmd as Admin and type
    ```
    conda init
    ```
    close that window
-   open a new cmd window in your Cleaning service dir (or navigate to the dir) and type
+   open a new cmd window in your GmailClean dir (or navigate to the dir) and type
    ```
-   conda create -n cleaning_service python=3.8 -y
-   conda activate cleaning_service
+   conda create -n GmailClean python=3.8 -y
+   conda activate GmailClean
    pip install -r requirements.txt
    ```
    If you have correctly placed the credentials.json file in the directory, then you should now be able to launch the site
